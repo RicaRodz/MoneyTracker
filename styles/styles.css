@@ -1,0 +1,50 @@
+/* DEVELOPER: Ricardo Rodriguez Sanchez, IS117-001, Fall 2025 */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa; /* Light background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    flex-shrink: 0;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #212529;
+}
+
+.text-muted-light {
+    color: #adb5bd;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0043a8 100%);
+    color: white;
+    border-bottom: 5px solid #0a58ca;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    padding: 20px;
+}

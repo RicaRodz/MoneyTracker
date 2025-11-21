@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="styles/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <!-- Money Tracker Name & Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/images/logo.png"
+            alt="Money Tracker Logo"
+            class="d-inline-block align-text-middle rounded-circle"
+            style="width: 60px; height: 60px; object-fit: cover"
+          />
+          Money Tracker
+        </a>
+        <!-- Hamburger sign for mobile navigation /small screen -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation bar -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="track.html">Track Money</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="resources.html"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Resources
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="resources.html">Overview</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="guide.html">Guide</a></li>
+                <li><a class="dropdown-item" href="tips.html">Tips</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header Title -->
+    <header class="hero-section text-white text-center py-5 mb-4">
+      <div class="container">
+        <h1 class="display-4 fw-bold">
+          Money Tracker – Take Control of Your Finances
+        </h1>
+        <p class="lead mb-4">
+          Track your spending, set savings goals, and stay on top of your money
+          — all in one place.
+        </p>
+        <!-- Action Buttons -->
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a href="track.html" class="btn btn-light btn-lg px-4 gap-3"
+            >Start Tracking</a
+          >
+          <a href="dashboard.html" class="btn btn-outline-light btn-lg px-4"
+            >View Dashboard</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section class="row py-3 text-center">
+      <div class="col-lg-8 mx-auto">
+        <h2>Welcome to Money Tracker</h2>
+        <p class="lead text-muted">
+          Your personal finance companion designed to help you understand where
+          your money goes.
+        </p>
+        <p>
+          Whether you’re a student saving for the future or a professional
+          managing monthly budgets, our tool helps you stay organized and
+          confident with your finances.
+        </p>
+      </div>
+    </section>
+
+    <div id="homeCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://via.placeholder.com/1200x400/0d6efd/ffffff?text=Take+Control+of+Your+Finances"
+            class="d-block w-100"
+            alt="Financial Planning"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Money Tracker</h2>
+            <p class="lead">
+              Track your spending, set savings goals, and stay on top of your
+              money.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="https://via.placeholder.com/1200x400/212529/ffffff?text=Visual+Dashboard"
+            class="d-block w-100"
+            alt="Dashboard View"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Visualize Your Habits</h2>
+            <p class="lead">
+              Our intuitive dashboard helps you understand exactly where your
+              money goes.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="https://via.placeholder.com/1200x400/198754/ffffff?text=Start+Saving+Today"
+            class="d-block w-100"
+            alt="Growth and Savings"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">Ready to Start?</h2>
+            <p class="lead">
+              Join thousands of users mastering their personal finance.
+            </p>
+            <a href="track.html" class="btn btn-light mt-2"
+              >Start Tracking Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#homeCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#homeCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <main class="container">
+      <section class="py-5">
+        <h2 class="text-center mb-5">Why Choose Money Tracker?</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/300x150?text=Tracking"
+                class="card-img-top"
+                alt="Chart showing simple tracking"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Simple Tracking</h5>
+                <p class="card-text">
+                  Log income and expenses with just a few clicks to keep your
+                  records accurate.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/300x150?text=Dashboard"
+                class="card-img-top"
+                alt="Visual dashboard example"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Visual Dashboard</h5>
+                <p class="card-text">
+                  View your spending trends with easy-to-read charts and graphs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/300x150?text=Goals"
+                class="card-img-top"
+                alt="Target icon for smart goals"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smart Goals</h5>
+                <p class="card-text">
+                  Set and monitor savings goals effortlessly to reach your
+                  targets.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/300x150?text=Tips"
+                class="card-img-top"
+                alt="Lightbulb icon for tips"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Practical Tips</h5>
+                <p class="card-text">
+                  Explore real-world financial advice to improve your money
+                  habits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row py-5 align-items-center bg-light rounded-3 my-5">
+        <div class="col-md-12 px-5">
+          <h3>Built for Everyday Users</h3>
+          <p>
+            Money Tracker is a straightforward yet powerful web app designed for
+            anyone who wants better control of their personal finances. Our
+            mission is to make financial tracking accessible, practical, and
+            even motivating through visual insights and guided resources.
+          </p>
+          <hr />
+          <p class="mb-0">
+            Ready to take the first step toward better money management?
+            <a href="track.html" class="fw-bold">Get Started here.</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-dark text-white text-center">
+      <div class="container">
+        <span class="text-muted-light"
+          >&copy; 2025 Money Tracker | Built by Ricardo Rodriguez Sanchez</span
+        >
+        <div class="mt-2">
+          <a href="#" class="text-white text-decoration-none mx-2"
+            >Terms of Service</a
+          >
+          <a href="#" class="text-white text-decoration-none mx-2"
+            >Privacy Statement</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
