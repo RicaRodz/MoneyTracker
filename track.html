@@ -1,253 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Track Money - Money Tracker</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="https://via.placeholder.com/30/ffffff/000000?text=MT" alt="Money Tracker Logo" class="d-inline-block align-text-top">
-                Money Tracker
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="track.html">Track Money</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="resources.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Resources
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="resources.html">Overview</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="guide.html">Guide</a></li>
-                            <li><a class="dropdown-item" href="tips.html">Tips</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/images/logo.png"
+            alt="Money Tracker Logo"
+            class="d-inline-block align-text-middle rounded-circle"
+            style="width: 60px; height: 60px; object-fit: cover"
+          />
+          Money Tracker
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="track.html"
+                >Track Money</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="resources.html"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Resources
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="resources.html">Overview</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="guide.html">Guide</a></li>
+                <li><a class="dropdown-item" href="tips.html">Tips</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <main class="container my-5">
-        
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="border-bottom pb-2">Track Your Money</h2>
-                <p class="text-muted">Add, view, and manage your transactions effortlessly.</p>
+      <div class="row mb-4">
+        <div class="col-12">
+          <h2 class="border-bottom pb-2">Track Your Money</h2>
+          <p class="text-muted">
+            Add, view, and manage your transactions effortlessly.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card shadow-sm mb-4">
+            <div class="card-header bg-primary text-white">
+              <h5 class="card-title mb-0">Add New Entry</h5>
             </div>
+            <div class="card-body">
+              <p class="small text-muted">
+                Quickly record your income or expenses.
+              </p>
+              <form>
+                <div class="mb-3">
+                  <label for="transType" class="form-label"
+                    >Transaction Type</label
+                  >
+                  <select class="form-select" id="transType">
+                    <option value="expense">Expense</option>
+                    <option value="income">Income</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="transAmount" class="form-label">Amount ($)</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="transAmount"
+                    placeholder="0.00"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="transCategory" class="form-label">Category</label>
+                  <select class="form-select" id="transCategory">
+                    <option selected>Choose...</option>
+                    <option value="food">Food</option>
+                    <option value="rent">Rent</option>
+                    <option value="transport">Transportation</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="transDate" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="transDate" />
+                </div>
+                <div class="mb-3">
+                  <label for="transDesc" class="form-label">Description</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="transDesc"
+                    placeholder="Optional notes"
+                  />
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-success">
+                    Add Transaction
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
 
-        <div class="row g-4">
-            
-            <div class="col-lg-4">
-                <div class="card shadow-sm mb-4">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="card-title mb-0">Add New Entry</h5>
-                    </div>
-                    <div class="card-body">
-                        <p class="small text-muted">Quickly record your income or expenses.</p>
-                        <form>
-                            <div class="mb-3">
-                                <label for="transType" class="form-label">Transaction Type</label>
-                                <select class="form-select" id="transType">
-                                    <option value="expense">Expense</option>
-                                    <option value="income">Income</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="transAmount" class="form-label">Amount ($)</label>
-                                <input type="number" class="form-control" id="transAmount" placeholder="0.00">
-                            </div>
-                            <div class="mb-3">
-                                <label for="transCategory" class="form-label">Category</label>
-                                <select class="form-select" id="transCategory">
-                                    <option selected>Choose...</option>
-                                    <option value="food">Food</option>
-                                    <option value="rent">Rent</option>
-                                    <option value="transport">Transportation</option>
-                                    <option value="entertainment">Entertainment</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="transDate" class="form-label">Date</label>
-                                <input type="date" class="form-control" id="transDate">
-                            </div>
-                            <div class="mb-3">
-                                <label for="transDesc" class="form-label">Description</label>
-                                <input type="text" class="form-control" id="transDesc" placeholder="Optional notes">
-                            </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-success">Add Transaction</button>
-                            </div>
-                        </form>
-                        <div class="alert alert-light mt-3 mb-0 border">
-                            <small>💡 <strong>Tip:</strong> Log every expense as soon as it happens — small habits lead to big financial clarity.</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Quick Summary</h5>
-                        <p class="text-muted small">Snapshot based on recent entries:</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Income (Month)
-                                <span class="badge bg-success rounded-pill">$2,350</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Expenses (Month)
-                                <span class="badge bg-danger rounded-pill">$1,780</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center fw-bold">
-                                Net Balance
-                                <span class="text-primary">$570</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Transaction History</h5>
             </div>
-
-            <div class="col-lg-8">
-                <div class="card shadow-sm">
-                    <div class="card-header">
-                        <h5 class="card-title mb-0">Transaction History</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row g-2 mb-3">
-                            <div class="col-md-4">
-                                <select class="form-select form-select-sm">
-                                    <option selected>Filter by Type (All)</option>
-                                    <option value="income">Income Only</option>
-                                    <option value="expense">Expense Only</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <select class="form-select form-select-sm">
-                                    <option selected>Filter by Category</option>
-                                    <option value="food">Food</option>
-                                    <option value="rent">Rent</option>
-                                    <option value="transport">Transportation</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4">
-                                <input type="text" class="form-control form-control-sm" placeholder="Search description...">
-                            </div>
-                        </div>
-
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Description</th>
-                                        <th>Category</th>
-                                        <th>Amount</th>
-                                        <th>Type</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Oct 6</td>
-                                        <td>Coffee</td>
-                                        <td>Food</td>
-                                        <td>$5.00</td>
-                                        <td><span class="badge bg-secondary">Expense</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary">✏️</button>
-                                            <button class="btn btn-sm btn-outline-danger">🗑️</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Oct 5</td>
-                                        <td>Paycheck</td>
-                                        <td>Income</td>
-                                        <td>$1,200.00</td>
-                                        <td><span class="badge bg-success">Income</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary">✏️</button>
-                                            <button class="btn btn-sm btn-outline-danger">🗑️</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Oct 3</td>
-                                        <td>Uber</td>
-                                        <td>Transportation</td>
-                                        <td>$18.50</td>
-                                        <td><span class="badge bg-secondary">Expense</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary">✏️</button>
-                                            <button class="btn btn-sm btn-outline-danger">🗑️</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Oct 1</td>
-                                        <td>Rent Payment</td>
-                                        <td>Rent</td>
-                                        <td>$1,100.00</td>
-                                        <td><span class="badge bg-secondary">Expense</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary">✏️</button>
-                                            <button class="btn btn-sm btn-outline-danger">🗑️</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <nav aria-label="Transaction pagination">
-                            <ul class="pagination justify-content-center mt-3">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                    </div>
+            <div class="card-body">
+              <div class="row g-2 mb-3">
+                <div class="col-md-4">
+                  <select class="form-select form-select-sm">
+                    <option selected>Filter by Type (All)</option>
+                    <option value="income">Income Only</option>
+                    <option value="expense">Expense Only</option>
+                  </select>
                 </div>
+                <div class="col-md-4">
+                  <select class="form-select form-select-sm">
+                    <option selected>Filter by Category</option>
+                    <option value="food">Food</option>
+                    <option value="rent">Rent</option>
+                    <option value="transport">Transportation</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="Search description..."
+                  />
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Date</th>
+                      <th>Description</th>
+                      <th>Category</th>
+                      <th>Amount</th>
+                      <th>Type</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Oct 6</td>
+                      <td>Coffee</td>
+                      <td>Food</td>
+                      <td>$5.00</td>
+                      <td><span class="badge bg-secondary">Expense</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">
+                          ✏️
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger">
+                          🗑️
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Oct 5</td>
+                      <td>Paycheck</td>
+                      <td>Income</td>
+                      <td>$1,200.00</td>
+                      <td><span class="badge bg-success">Income</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">
+                          ✏️
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger">
+                          🗑️
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Oct 3</td>
+                      <td>Uber</td>
+                      <td>Transportation</td>
+                      <td>$18.50</td>
+                      <td><span class="badge bg-secondary">Expense</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">
+                          ✏️
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger">
+                          🗑️
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Oct 1</td>
+                      <td>Rent Payment</td>
+                      <td>Rent</td>
+                      <td>$1,100.00</td>
+                      <td><span class="badge bg-secondary">Expense</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">
+                          ✏️
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger">
+                          🗑️
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
+          </div>
         </div>
-
+      </div>
     </main>
 
     <footer class="footer mt-auto py-3 bg-dark text-white text-center">
-        <div class="container">
-            <span class="text-muted-light">&copy; 2025 Money Tracker | Built by Ricardo Rodriguez Sanchez</span>
-            <div class="mt-2">
-                <a href="#" class="text-white text-decoration-none mx-2">Terms of Service</a>
-                <a href="#" class="text-white text-decoration-none mx-2">Privacy Statement</a>
-            </div>
+      <div class="container">
+        <span class="text-muted-light"
+          >&copy; 2025 Money Tracker | Built by Ricardo Rodriguez Sanchez</span
+        >
+        <div class="mt-2">
+          <a href="#" class="text-white text-decoration-none mx-2"
+            >Terms of Service</a
+          >
+          <a href="#" class="text-white text-decoration-none mx-2"
+            >Privacy Statement</a
+          >
         </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
