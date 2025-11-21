@@ -115,97 +115,103 @@
       </div>
     </section>
 
-    <div id="homeCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#homeCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#homeCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#homeCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="https://via.placeholder.com/1200x400/0d6efd/ffffff?text=Take+Control+of+Your+Finances"
-            class="d-block w-100"
-            alt="Financial Planning"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="fw-bold">Money Tracker</h2>
-            <p class="lead">
-              Track your spending, set savings goals, and stay on top of your
-              money.
-            </p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img
-            src="https://via.placeholder.com/1200x400/212529/ffffff?text=Visual+Dashboard"
-            class="d-block w-100"
-            alt="Dashboard View"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="fw-bold">Visualize Your Habits</h2>
-            <p class="lead">
-              Our intuitive dashboard helps you understand exactly where your
-              money goes.
-            </p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img
-            src="https://via.placeholder.com/1200x400/198754/ffffff?text=Start+Saving+Today"
-            class="d-block w-100"
-            alt="Growth and Savings"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="fw-bold">Ready to Start?</h2>
-            <p class="lead">
-              Join thousands of users mastering their personal finance.
-            </p>
-            <a href="track.html" class="btn btn-light mt-2"
-              >Start Tracking Now</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#homeCarousel"
-        data-bs-slide="prev"
+    <div class="container" style="max-width: 1200px">
+      <div
+        id="homeCarousel"
+        class="carousel slide mb-5"
+        data-bs-ride="carousel"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#homeCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/images/track.png"
+              class="d-block w-100"
+              alt="Financial Planning"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="fw-bold">Money Tracker</h2>
+              <p class="lead">
+                Track your spending, set savings goals, and stay on top of your
+                money.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="/images/dash.png"
+              class="d-block w-100"
+              alt="Dashboard View"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="fw-bold">Visualize Your Habits</h2>
+              <p class="lead">
+                Our intuitive dashboard helps you understand exactly where your
+                money goes.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="/images/resources.png"
+              class="d-block w-100"
+              alt="Growth and Savings"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="fw-bold">Ready to Start?</h2>
+              <p class="lead">
+                Join thousands of users mastering their personal finance.
+              </p>
+              <a href="track.html" class="btn btn-light mt-2"
+                >Start Tracking Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
 
     <main class="container">
@@ -215,7 +221,7 @@
           <div class="col">
             <div class="card h-100 shadow-sm">
               <img
-                src="https://via.placeholder.com/300x150?text=Tracking"
+                src="/images/simple-track.png"
                 class="card-img-top"
                 alt="Chart showing simple tracking"
               />
@@ -230,9 +236,9 @@
           </div>
 
           <div class="col">
-            <div class="card h-100 shadow-sm">
+            <div class="card shadow-sm">
               <img
-                src="https://via.placeholder.com/300x150?text=Dashboard"
+                src="/images/dash.png"
                 class="card-img-top"
                 alt="Visual dashboard example"
               />
@@ -248,7 +254,7 @@
           <div class="col">
             <div class="card h-100 shadow-sm">
               <img
-                src="https://via.placeholder.com/300x150?text=Goals"
+                src="/images/target.png"
                 class="card-img-top"
                 alt="Target icon for smart goals"
               />
@@ -265,7 +271,7 @@
           <div class="col">
             <div class="card h-100 shadow-sm">
               <img
-                src="https://via.placeholder.com/300x150?text=Tips"
+                src="/images/tips.png"
                 class="card-img-top"
                 alt="Lightbulb icon for tips"
               />
@@ -278,23 +284,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="row py-5 align-items-center bg-light rounded-3 my-5">
-        <div class="col-md-12 px-5">
-          <h3>Built for Everyday Users</h3>
-          <p>
-            Money Tracker is a straightforward yet powerful web app designed for
-            anyone who wants better control of their personal finances. Our
-            mission is to make financial tracking accessible, practical, and
-            even motivating through visual insights and guided resources.
-          </p>
-          <hr />
-          <p class="mb-0">
-            Ready to take the first step toward better money management?
-            <a href="track.html" class="fw-bold">Get Started here.</a>
-          </p>
         </div>
       </section>
     </main>
